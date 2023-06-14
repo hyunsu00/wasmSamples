@@ -1,5 +1,5 @@
-[submodule "zlibSamples/zlib"]
-	path = zlibSamples/zlib
+[submodule "zlibSample/zlib"]
+	path = zlibSample/zlib
 	url = https://github.com/emscripten-ports/zlib.git
 [submodule "commonSample/Extern/zlib"]
 	path = commonSample/Extern/zlib
