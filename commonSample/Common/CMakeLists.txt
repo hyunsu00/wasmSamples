@@ -19,7 +19,6 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 set(CMAKE_CXX_FLAGS "-std=c++11")
 add_subdirectory(../Extern/zlib "${CMAKE_CURRENT_BINARY_DIR}/zlib")
-#add_dependencies(${PROJECT_NAME} ../Extern/zlib)
 add_library(${PROJECT_NAME}
     ${CMAKE_CURRENT_SOURCE_DIR}/pch.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/HncZLib/HncZLib.cpp)
