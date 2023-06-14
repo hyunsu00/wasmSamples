@@ -1,0 +1,3 @@
+[submodule "zlibSamples/zlib"]
+	path = zlibSamples/zlib
+	url = https://github.com/emscripten-ports/zlib.git
