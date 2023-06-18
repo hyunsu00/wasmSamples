@@ -1,0 +1,7 @@
+[
+    {
+        "name": "Emscripten",
+        "toolchainFile": "${env:EMSDK}/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
+        "isTrusted": true
+    }
+]

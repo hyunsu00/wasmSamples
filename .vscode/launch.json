@@ -1,15 +1,47 @@
 {
-    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
-    // 기존 특성에 대한 설명을 보려면 가리킵니다.
-    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch sample01/hello.html",
-            "request": "launch",
-            "type": "chrome",
-            "url": "http://localhost:8088/sample01/build/hello.html",
-            "webRoot": "${workspaceFolder}"
-        }
-    ]
+	// IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+	// 기존 특성에 대한 설명을 보려면 가리킵니다.
+	// 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(node) HwpTextExtractor 디버깅",
+			"type": "node",
+			"program": "${workspaceFolder}/build/HwpTextExtractor/HwpTextExtractor.js",
+			"cwd": "${workspaceFolder}/build/HwpTextExtractor",
+			"args": [
+				"-s",
+				"./Samples/한글문서.hwpx",
+				"--memory"
+			],
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"outputCapture": "std"
+		},
+		{
+			"name": "(cppdbg) HwpTextExtractor 디버깅",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/build/HwpTextExtractor/HwpTextExtractor",
+			"cwd": "${workspaceFolder}/build/HwpTextExtractor",
+			"args": [
+				"-s",
+				"./Samples/한글문서.hwpx",
+				"--memory"
+			],
+			"stopAtEntry": false,
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "gdb에 자동 서식 지정 사용",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			]
+		}
+	]
 }

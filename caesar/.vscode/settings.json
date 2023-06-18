@@ -1,0 +1,6 @@
+{
+    "editor.tabSize": 2,
+	"editor.formatOnSave": false,
+	"html.format.enable": true,
+    "liveServer.settings.port": 28080 
+}
